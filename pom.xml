@@ -5,6 +5,8 @@
   	<artifactId>restServices</artifactId>
   	<version>1.0</version>
 
+<properties><java.awt.headless>true</java.awt.headless></properties>
+
 <pluginRepositories>
     <pluginRepository>
         <id>smartbear-sweden-plugin-repository</id>
@@ -23,10 +25,12 @@
 			<soapuiProperties>
                 <property>
                     <name>soapui.log4j.config</name>
-                    <value>${basedir}\soapui-log4j.xml</value>
+                    <value>${basedir}/soapui-log4j.xml</value>
                 </property>
             </soapuiProperties>
-            <outputFolder>${basedir}\logs\</outputFolder>
+            <outputFolder>${basedir}/logs</outputFolder>
+            <junitReport>true</junitReport>
+            <exportAll>true</exportAll>
         </configuration>
         <executions>
             <execution>

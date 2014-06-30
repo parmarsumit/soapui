@@ -17,7 +17,7 @@
     <plugin>
         <groupId>com.smartbear.soapui</groupId>
         <artifactId>soapui-maven-plugin</artifactId>
-        <version>5.0.0</version>
+        <version>4.6.4</version>
         <configuration>
             <projectFile>Grindr-Services-soapui-project.xml</projectFile>
 			<soapuiProperties>
@@ -28,6 +28,14 @@
             </soapuiProperties>
             <outputFolder>${basedir}\logs\</outputFolder>
         </configuration>
+        <executions>
+            <execution>
+                <phase>test</phase>
+                <goals>
+                    <goal>test</goal>
+                </goals>
+            </execution>
+        </executions>
     </plugin>
 </plugins>
 </build>
